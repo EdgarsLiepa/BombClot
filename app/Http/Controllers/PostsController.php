@@ -12,15 +12,17 @@ class PostsController extends Controller
 
     {
 
-      return view ('posts.home');
+      $posts = Post::latest()->get();
+
+      return view ('posts.home', compact('posts'));
 
     }
 
-    public function show()
+    public function show(Post $post )
 
     {
 
-      return view ('posts.show');
+             return view ('posts.show', compact('post'));
 
     }
 
@@ -45,8 +47,16 @@ class PostsController extends Controller
 
     {
 
+      $this->validate(request(), [
 
-      Post::create(request(['title', 'body']));
+        'title' => 'required',
+        'body'  => 'required',
+        'picture' => 'required',
+        'preview' => 'required'
+
+      ]);
+
+      Post::create(request(['title', 'body', 'picture', 'preview']));
 
       return redirect('/');
 

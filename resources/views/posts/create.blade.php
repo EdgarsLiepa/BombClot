@@ -8,7 +8,7 @@
 
 @section ('content')
 
-  <h1 class="mt-4"> create a Post </h1>
+  <h1 class="mt-4"> Create a Post </h1>
   <hr>
   <form method="POST" action="/posts">
 
@@ -22,13 +22,36 @@
   <div class="form-group">
     <label for="exampleInputPassword1">Body</label>
 
-    <textarea id="body" name="body" class="form-control"></textarea>
-
+    <textarea id="body" name="body" class="form-control" ></textarea>
 
   </div>
 
+  <div class="form-group">
+
+    <label for="Title">Short preview</label>
+    <input type="text" class="form-control" id="preview" name="preview" >
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="Title">Picture link</label>
+    <input type="text" class="form-control" id="picture" name="picture" >
+
+  </div>
+
+  
+<hr>
+
+
+  <div class="form-group">
 
   <button type="submit" class="btn btn-primary">Publish</button>
+
+  </div>
+
+  @include ('layouts.errors')
+
 </form>
 
 @endsection

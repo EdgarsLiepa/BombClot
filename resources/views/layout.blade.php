@@ -33,7 +33,7 @@
             @yield ('content')
 
           <!-- Comments Form -->
-          
+
 
         </div>
 

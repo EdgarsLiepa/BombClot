@@ -14,7 +14,7 @@
         <a class="nav-link" href="/top100">Top 100</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#">History</a>
+        <a class="nav-link " href="/create">Create</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
