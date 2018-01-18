@@ -37,8 +37,8 @@
         </div>
 
 
-</div>
-            </div>
+      </div>
+          </div>
           </div>
 
         </div>
@@ -46,10 +46,10 @@
       </div>
       <!-- /.row -->
 
+      @include ('layouts.footer')
     </div>
     <!-- /.container -->
 
-    @include ('layouts.footer')
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

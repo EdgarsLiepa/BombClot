@@ -33,16 +33,16 @@
             @yield ('content')
 
           <!-- Comments Form -->
-          @include ('layouts.comments')
+          
 
         </div>
 
         <!-- Sidebar Widgets Column -->
         @include ('layouts.sidebarwidgets')
 
-</div>
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
 
         </div>
 

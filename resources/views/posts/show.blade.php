@@ -51,4 +51,6 @@
 
 <hr>
 
+@include ('layouts.comments')
+
 @endsection
