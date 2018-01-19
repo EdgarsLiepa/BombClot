@@ -14,7 +14,7 @@ class PostsController extends Controller
 
       $posts = Post::latest()->get();
 
-      return view ('posts.home', compact('posts'));
+      return view ('home', compact('posts'));
 
     }
 
@@ -56,10 +56,33 @@ class PostsController extends Controller
 
       ]);
 
-      Post::create(request(['title', 'body', 'picture', 'preview']));
+      Post::create([
+        'title' => request('title'),
+        'body' => request('body'),
+        'picture' => request('picture'),
+        'preview' => request('preview'),
+        'user_id' => auth()->id()
+      ]);
 
       return redirect('/');
 
 
     }
+
+
+    public function __construct()
+
+    {
+
+      $this->middleware('auth')->except(['index', 'show', 'top']);
+
+
+    }
+
+
+
+
+
+
+
 }

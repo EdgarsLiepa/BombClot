@@ -1,7 +1,7 @@
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-  <div class="container">
-    <p class="m-0 text-center text-white">Bomba Clot &copy; 2018</p>
+
+<footer class="footer">
+  <div class="yes">
+    <p class="m-0 text-center text-white">Copyright &copy; Roberts Apšusals, Gustavs Ozoliņš, Edgars Liepa</p>
   </div>
   <!-- /.container -->
 </footer>

@@ -22,27 +22,7 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#"><img src="https://i.imgur.com/3XRvs0I.png" alt="Bombaclot" style="width:150px;height:40px;"></img></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/top100">Top 100</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link " href="https://genius.com/">Related</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  @include ('layouts.nav')
 
     <!-- Page Content -->
     <div class="container">
@@ -59,6 +39,13 @@
           <!-- Post Content -->
           <div class="shell">
          <div id="content" class="left">
+
+
+           @foreach ($posts as $post)
+
+            @include ('posts.post_fetured')
+
+           @endforeach
 
            <div class="box box-featured">
              <div class= "article_header"><h3>How A New Generation Of Chicago Artists Redefined Rap</h3></div>
@@ -129,12 +116,7 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="yes">
-        <p class="m-0 text-center text-white">Copyright &copy; Roberts Apšusals, Gustavs Ozoliņš, Edgars Liepa</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    @include ('layouts.footer')
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

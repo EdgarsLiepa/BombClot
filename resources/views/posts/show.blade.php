@@ -16,7 +16,7 @@
 <!-- Author -->
 <p class="lead">
   by
-  <a href="#">Start Bootstrap</a>
+  <a href="#">{{ $post->user->name }}</a>
 </p>
 
 <hr>
@@ -32,7 +32,7 @@
 <hr>
 
 <!-- Post Content -->
- <h6>{{ $post->body }}</h6>
+ {{ $post->body }}
 
 <hr>
 

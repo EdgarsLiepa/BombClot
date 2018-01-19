@@ -1,4 +1,4 @@
-@extends ('home_layout')
+@extends ('home')
 
 
 @section ('home.css')
@@ -22,10 +22,7 @@
 
 @endforeach
 
- @include ('posts.post')
-
- @include ('posts.post_smallbox')
-
+ 
 
 
 

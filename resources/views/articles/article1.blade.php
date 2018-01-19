@@ -22,26 +22,7 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="/home"><img src="https://i.imgur.com/3XRvs0I.png" alt="Bombaclot" style="width:150px;height:40px;"></img></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/top100">Top 100</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="https://genius.com/">Related</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    @include ('layouts.nav')
 
     <!-- Page Content -->
     <div class="container">
@@ -260,13 +241,15 @@ Chi to kill them with kindness
   </div>
 </div>
 </div>
+
+
+
           <hr>
 
 
 
 
 
-              
 
             </div>
           </div>
@@ -293,13 +276,7 @@ Chi to kill them with kindness
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="yes">
-        <p class="m-0 text-center text-white">Copyright &copy; Roberts Apšusals, Gustavs Ozoliņš, Edgars Liepa</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
+  @include ('layouts.footer')
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

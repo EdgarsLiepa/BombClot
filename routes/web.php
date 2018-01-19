@@ -12,19 +12,27 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+
+  $posts = \App\Post::latest()->get();
+
+  return view ('home', compact('posts'));
+
 });
 
 
 
 Auth::routes();
 
+Route::get('/create', 'PostsController@create');
+
+Route::post('/posts/{post}/comments', 'CommentsController@store');
+
+Route::get('/posts/{post}', 'PostsController@show');
+
+Route::post('/posts', 'PostsController@store');
 
 
-Route::get ('/home', function()
-{
-    return view('home');
-});
+
 Route::get('top100', function()
 {
 
@@ -37,6 +45,7 @@ Route::get('news', function(){
   return view('news');
 
 });
+
 
 Route::get('articles/article1', function(){
 
